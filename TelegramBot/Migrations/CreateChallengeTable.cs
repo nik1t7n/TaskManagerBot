@@ -1,5 +1,7 @@
 ﻿using FluentMigrator;
+using FluentMigrator.Runner;
 using Microsoft.Extensions.DependencyInjection;
+using System;
 
 [Migration(1)] // Укажите уникальный номер миграции
 public class CreateChallengeTable : Migration
@@ -28,5 +30,15 @@ public class CreateChallengeTable : Migration
     //            .ScanIn(typeof(CreateChallengeTable).Assembly).For.Migrations()) // Указываем FluentMigrator, где искать миграции
     //        .AddLogging(lb => lb.AddFluentMigratorConsole())
     //        .BuildServiceProvider(false);
+    //}
+
+    // write this is main during migration
+    //var serviceProvider = CreateServices();
+
+
+    //using (var scope = serviceProvider.CreateScope())
+    //{
+    //    var runner = scope.ServiceProvider.GetRequiredService<IMigrationRunner>();
+    //    runner.MigrateUp();
     //}
 }
