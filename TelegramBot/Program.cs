@@ -27,13 +27,13 @@ namespace TelegramBot // Note: actual namespace depends on the project name.
         private static ReceiverOptions _receiverOptions;
 
         private static IConfiguration configuration = new ConfigurationBuilder()
-            .AddJsonFile("C:\\Users\\User\\Desktop\\VS_Projects\\TelegramBot\\TelegramBot\\appsettings.json")
+            .AddJsonFile("appsettings.json")
             .Build();
 
 
         static async Task Main()
         {
-            Env.Load("C:\\Users\\User\\Desktop\\VS_Projects\\TelegramBot\\TelegramBot\\sensitive.env");
+            Env.Load("sensitive.env");
 
             string botToken = Environment.GetEnvironmentVariable("API_KEY");
 
